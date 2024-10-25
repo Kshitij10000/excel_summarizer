@@ -1,0 +1,31 @@
+{% extends 'upload/base.html' %}
+
+{% block title %}Send Summary Email{% endblock %}
+
+{% block content %}
+<div class="card mb-4">
+    <div class="card-header">
+        <h3>Summary Report</h3>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive mb-4">
+            {{ summary_html|safe }}
+        </div>
+        <form method="post" class="row g-3">
+            {% csrf_token %}
+            <div class="col-md-12">
+                {{ form.recipient_email.label_tag }}
+                {{ form.recipient_email }}
+                {% if form.recipient_email.errors %}
+                    <div class="invalid-feedback d-block">
+                        {{ form.recipient_email.errors }}
+                    </div>
+                {% endif %}
+            </div>
+            <div class="col-12 text-center">
+                <button type="submit" class="btn btn-primary"><i class="bi bi-envelope"></i> Send Email</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

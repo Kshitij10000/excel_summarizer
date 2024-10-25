@@ -1,0 +1,17 @@
+{% extends 'upload/base.html' %}
+
+{% block title %}Email Sent{% endblock %}
+
+{% block content %}
+<div class="card text-center">
+    <div class="card-header bg-success text-white">
+        <h3>Email Sent Successfully!</h3>
+    </div>
+    <div class="card-body">
+        <p>The summary report has been sent to the specified recipient.</p>
+        <a href="{% url 'upload_file' %}" class="btn btn-primary">
+            <i class="bi bi-upload"></i> Upload Another File
+        </a>
+    </div>
+</div>
+{% endblock %}

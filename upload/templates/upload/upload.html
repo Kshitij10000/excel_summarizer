@@ -1,0 +1,27 @@
+{% extends 'upload/base.html' %}
+
+{% block title %}Upload File{% endblock %}
+
+{% block content %}
+<div class="card">
+    <div class="card-header">
+        <h3>Upload Excel/CSV File</h3>
+    </div>
+    <div class="card-body">
+        <form method="post" enctype="multipart/form-data" class="needs-validation" novalidate>
+            {% csrf_token %}
+            <div class="mb-3">
+                {{ form.file.label_tag }}
+                {{ form.file }}
+                <div class="form-text">Supported formats: .xlsx, .xls, .csv. Max size: 42MB.</div>
+                {% if form.file.errors %}
+                    <div class="invalid-feedback d-block">
+                        {{ form.file.errors }}
+                    </div>
+                {% endif %}
+            </div>
+            <button type="submit" class="btn btn-primary"><i class="bi bi-upload"></i> Upload</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

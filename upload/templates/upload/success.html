@@ -1,0 +1,23 @@
+{% extends 'upload/base.html' %}
+
+{% block title %}Upload Successful{% endblock %}
+
+{% block content %}
+<div class="card mb-4">
+    <div class="card-header bg-success text-white">
+        <h3>Upload Successful!</h3>
+    </div>
+    <div class="card-body">
+        <p>Your file has been processed successfully.</p>
+        <div class="table-responsive mb-4">
+            {{ summary|safe }}
+        </div>
+        <a href="{% url 'send_email' %}" class="btn btn-primary">
+            <i class="bi bi-envelope"></i> Send Summary via Email
+        </a>
+        <a href="{% url 'upload_file' %}" class="btn btn-secondary">
+            <i class="bi bi-upload"></i> Upload Another File
+        </a>
+    </div>
+</div>
+{% endblock %}
