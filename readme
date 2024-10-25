@@ -1,0 +1,97 @@
+# 📁 DevTest Project
+
+![GitHub stars](https://img.shields.io/github/stars/yourusername/devtest?style=social)
+![GitHub forks](https://img.shields.io/github/forks/yourusername/devtest?style=social)
+![License](https://img.shields.io/github/license/yourusername/devtest)
+![Django](https://img.shields.io/badge/Django-5.1.2-green.svg)
+![Python](https://img.shields.io/badge/Python-3.11-blue.svg)
+
+Welcome to the **DevTest Project**! 🚀
+
+A sleek and user-friendly Django application designed to effortlessly handle Excel/CSV file uploads, display data, summarize it, and send summary reports via email. Whether you're managing data analysis tasks or streamlining reporting processes, this project offers a robust solution tailored to your needs.
+
+---
+
+## 📝 Table of Contents
+
+- [📁 DevTest Project](#-devtest-project)
+  - [🛠 Features](#-features)
+  - [🚀 Live Demo](#-live-demo)
+  - [📸 Screenshots](#-screenshots)
+  - [💻 Technologies Used](#-technologies-used)
+  - [🧑‍💻 Installation](#-installation)
+  - [🔧 Configuration](#-configuration)
+  - [🎓 Usage](#-usage)
+  - [🧪 Testing](#-testing)
+  - [🤝 Contributing](#-contributing)
+  - [📄 License](#-license)
+  - [📫 Contact](#-contact)
+
+---
+
+## 🛠 Features
+
+- **File Upload**: Seamlessly upload `.xlsx`, `.xls`, or `.csv` files with a maximum size of 42MB.
+- **Data Display**: View uploaded data in a responsive and interactive table.
+- **Data Summarization**: Automatically summarize data by grouping and aggregating specific columns.
+- **Email Reports**: Send summarized reports directly to specified email addresses.
+- **User-Friendly UI**: Enhanced with Bootstrap for a modern and responsive design.
+- **Secure**: Implements best practices for security, including environment variable management and form validations.
+- **Extensible**: Modular project structure for easy feature additions and maintenance.
+
+---
+
+## 🚀 Live Demo
+
+> *Coming Soon!*
+
+Experience the DevTest Project in action. Stay tuned for the live demo link!
+
+---
+
+## 📸 Screenshots
+
+<!-- Replace the links below with actual screenshots of your application -->
+
+### Upload Page
+
+![Upload Page](https://via.placeholder.com/800x400?text=Upload+Page)
+
+### Display Data
+
+![Display Data](https://via.placeholder.com/800x400?text=Display+Data)
+
+### Send Email
+
+![Send Email](https://via.placeholder.com/800x400?text=Send+Email)
+
+### Success Page
+
+![Success Page](https://via.placeholder.com/800x400?text=Success+Page)
+
+---
+
+## 💻 Technologies Used
+
+- **Backend**:
+  - [Django 5.1.2](https://www.djangoproject.com/)
+  - [Pandas](https://pandas.pydata.org/)
+  - [Python 3.11](https://www.python.org/)
+- **Frontend**:
+  - [Bootstrap 5](https://getbootstrap.com/)
+  - [Bootstrap Icons](https://icons.getbootstrap.com/)
+- **Other**:
+  - [SQLite](https://www.sqlite.org/index.html) (Default Database)
+  - [Python Decouple](https://github.com/henriquebastos/python-decouple) for environment variable management
+
+---
+
+## 🧑‍💻 Installation
+
+Follow these steps to set up the DevTest Project locally:
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/yourusername/devtest.git
+cd devtest
