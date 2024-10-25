@@ -1,12 +1,6 @@
-# 📁 DevTest Project
+## 📁 DevTest Project
 
-![GitHub stars](https://img.shields.io/github/stars/yourusername/devtest?style=social)
-![GitHub forks](https://img.shields.io/github/forks/yourusername/devtest?style=social)
-![License](https://img.shields.io/github/license/yourusername/devtest)
-![Django](https://img.shields.io/badge/Django-5.1.2-green.svg)
-![Python](https://img.shields.io/badge/Python-3.11-blue.svg)
-
-Welcome to the **DevTest Project**! 🚀
+## Welcome to the **DevTest Project**! 🚀
 
 A sleek and user-friendly Django application designed to effortlessly handle Excel/CSV file uploads, display data, summarize it, and send summary reports via email. Whether you're managing data analysis tasks or streamlining reporting processes, this project offers a robust solution tailored to your needs.
 
@@ -51,7 +45,7 @@ Experience the DevTest Project in action. Stay tuned for the live demo link!
 
 ## 📸 Screenshots
 
-<!-- Replace the links below with actual screenshots of your application -->
+
 
 ### Upload Page
 
@@ -80,9 +74,6 @@ Experience the DevTest Project in action. Stay tuned for the live demo link!
 - **Frontend**:
   - [Bootstrap 5](https://getbootstrap.com/)
   - [Bootstrap Icons](https://icons.getbootstrap.com/)
-- **Other**:
-  - [SQLite](https://www.sqlite.org/index.html) (Default Database)
-  - [Python Decouple](https://github.com/henriquebastos/python-decouple) for environment variable management
 
 ---
 
@@ -90,8 +81,11 @@ Experience the DevTest Project in action. Stay tuned for the live demo link!
 
 Follow these steps to set up the DevTest Project locally:
 
-### 1. Clone the Repository
+# 1. Clone the Repository
 
-```bash
 git clone https://github.com/yourusername/devtest.git
-cd devtest
+
+Install all requirements.txt
+
+py manage.py runserver
+
