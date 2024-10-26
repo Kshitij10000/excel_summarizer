@@ -13,22 +13,6 @@ A sleek and user-friendly Django application designed to effortlessly handle Exc
 - Extensible: Modular project structure for easy feature additions and maintenance.
 ---
 
-# 🚀 Live Demo
-> *Coming Soon!*
-Experience the DevTest Project in action. Stay tuned for the live demo link!
----
-
-# 📸 Screenshots
-
-Upload Page
-![Upload Page](https://via.placeholder.com/800x400?text=Upload+Page)
-Display Data
-![Display Data](https://via.placeholder.com/800x400?text=Display+Data)
-Send Email
-![Send Email](https://via.placeholder.com/800x400?text=Send+Email)
-Success Page
-![Success Page](https://via.placeholder.com/800x400?text=Success+Page)
-
 # 💻 Technologies Used
 
 - Backend:
