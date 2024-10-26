@@ -1,91 +1,128 @@
 ## 📁 DevTest Project
 
-## Welcome to the **DevTest Project**! 🚀
-
+Welcome to the DevTest Project! 🚀
 A sleek and user-friendly Django application designed to effortlessly handle Excel/CSV file uploads, display data, summarize it, and send summary reports via email. Whether you're managing data analysis tasks or streamlining reporting processes, this project offers a robust solution tailored to your needs.
-
+---
+# 🛠 Features
+- File Upload: Seamlessly upload `.xlsx`, `.xls`, or `.csv` files with a maximum size of 42MB.
+- Data Display: View uploaded data in a responsive and interactive table.
+- Data Summarization: Automatically summarize data by grouping and aggregating specific columns.
+- Email Reports: Send summarized reports directly to specified email addresses.
+- User-Friendly UI: Enhanced with Bootstrap for a modern and responsive design.
+- Secure: Implements best practices for security, including environment variable management and form validations.
+- Extensible: Modular project structure for easy feature additions and maintenance.
 ---
 
-## 📝 Table of Contents
-
-- [📁 DevTest Project](#-devtest-project)
-  - [🛠 Features](#-features)
-  - [🚀 Live Demo](#-live-demo)
-  - [📸 Screenshots](#-screenshots)
-  - [💻 Technologies Used](#-technologies-used)
-  - [🧑‍💻 Installation](#-installation)
-  - [🔧 Configuration](#-configuration)
-  - [🎓 Usage](#-usage)
-  - [🧪 Testing](#-testing)
-  - [🤝 Contributing](#-contributing)
-  - [📄 License](#-license)
-  - [📫 Contact](#-contact)
-
----
-
-## 🛠 Features
-
-- **File Upload**: Seamlessly upload `.xlsx`, `.xls`, or `.csv` files with a maximum size of 42MB.
-- **Data Display**: View uploaded data in a responsive and interactive table.
-- **Data Summarization**: Automatically summarize data by grouping and aggregating specific columns.
-- **Email Reports**: Send summarized reports directly to specified email addresses.
-- **User-Friendly UI**: Enhanced with Bootstrap for a modern and responsive design.
-- **Secure**: Implements best practices for security, including environment variable management and form validations.
-- **Extensible**: Modular project structure for easy feature additions and maintenance.
-
----
-
-## 🚀 Live Demo
-
+# 🚀 Live Demo
 > *Coming Soon!*
-
 Experience the DevTest Project in action. Stay tuned for the live demo link!
-
 ---
 
-## 📸 Screenshots
+# 📸 Screenshots
 
-
-
-### Upload Page
-
+Upload Page
 ![Upload Page](https://via.placeholder.com/800x400?text=Upload+Page)
-
-### Display Data
-
+Display Data
 ![Display Data](https://via.placeholder.com/800x400?text=Display+Data)
-
-### Send Email
-
+Send Email
 ![Send Email](https://via.placeholder.com/800x400?text=Send+Email)
-
-### Success Page
-
+Success Page
 ![Success Page](https://via.placeholder.com/800x400?text=Success+Page)
 
----
+# 💻 Technologies Used
 
-## 💻 Technologies Used
-
-- **Backend**:
+- Backend:
   - [Django 5.1.2](https://www.djangoproject.com/)
   - [Pandas](https://pandas.pydata.org/)
   - [Python 3.11](https://www.python.org/)
-- **Frontend**:
+- Frontend:
   - [Bootstrap 5](https://getbootstrap.com/)
   - [Bootstrap Icons](https://icons.getbootstrap.com/)
+- Other:
+  - [SQLite](https://www.sqlite.org/index.html) (Default Database)
+  - [Python Decouple](https://github.com/henriquebastos/python-decouple) for environment variable management
 
----
-
-## 🧑‍💻 Installation
+# 🧑‍💻 Installation
 
 Follow these steps to set up the DevTest Project locally:
+1. Clone the Repository
+git clone https://github.com/Kshitij10000/excel_summarizer.git
+2. Create a Virtual Environment
+It's recommended to use a virtual environment to manage dependencies.
+python3 -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+3. Install Dependencies
+pip install -r requirements.txt
+4. Apply Migrations
+python manage.py migrate
+5. Create a Superuser (Optional)
+To access the Django admin interface.
+python manage.py createsuperuser
+Run the Development Server
+python manage.py runserver
+Navigate to http://localhost:8000 in your browser to access the application.
 
-# 1. Clone the Repository
+# 🔧 Configuration
+1. Environment Variables
+Create a .env file in the project's root directory and add the following configurations:
 
-git clone https://github.com/yourusername/devtest.git
+Security
+SECRET_KEY=your-production-secret-key
+DEBUG=True
+ALLOWED_HOSTS=localhost,127.0.0.1
 
-Install all requirements.txt
+Database
+DATABASE_URL=sqlite:///db.sqlite3
 
-py manage.py runserver
+Email
+EMAIL_HOST_USER=your_email@example.com
+EMAIL_HOST_PASSWORD=your-email-password
+EMAIL_HOST=smtp.gmail.com
+EMAIL_PORT=587
+EMAIL_USE_TLS=True
+DEFAULT_FROM_EMAIL=your_email@example.com
+
+Security Settings
+SECURE_SSL_REDIRECT=False
+SESSION_COOKIE_SECURE=False
+CSRF_COOKIE_SECURE=False
+Note: Ensure that the .env file is added to .gitignore to prevent sensitive information from being pushed to version control.
+
+
+# 🎓 Usage
+1. Run the Development Server
+
+python manage.py runserver
+Navigate to http://localhost:8000 in your browser to access the application.
+
+2. Upload a File
+Click on the Upload File section.
+Select an Excel or CSV file (max 42MB).
+Submit the form to upload and process the data.
+
+3. View Uploaded Data
+After a successful upload, you'll be redirected to the Display Data page.
+Review the uploaded data in a structured table format.
+
+4. Summarize Data
+Click on the Summarize Data button to generate a summary report.
+The application will group data by 'Cust State' and sum the 'DPD' column.
+
+5. Send Summary via Email
+Enter the recipient's email address in the provided form.
+Submit to send the summarized report directly to the specified email.
+
+# 📄 License
+Distributed under the MIT License. See LICENSE for more information.
+
+# 📫 Contact
+Kshitij Sarve -- kshitijsarve2001@gmail.com
+
+Project Link: https://github.com/Kshitij10000/excel_summarizer
+
+# 💡 Acknowledgements
+Django Documentation
+Bootstrap
+Pandas
+
 
