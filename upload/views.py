@@ -4,6 +4,8 @@ from django.core.mail import send_mail
 from django.conf import settings
 from .forms import UploadFileForm, RecipientForm
 from django.contrib import messages
+from django.core.mail import EmailMultiAlternatives
+from django.template.loader import render_to_string
 
 def upload_file(request):
     if request.method == 'POST':
@@ -98,13 +100,29 @@ def send_email_view(request):
         if form.is_valid():
             recipient_email = form.cleaned_data['recipient_email']
             try:
-                send_mail(
-                    subject='Python Assignment - Your Name',
-                    message=f'Summary Report:\n\n{summary_text}',
-                    from_email=settings.EMAIL_HOST_USER,
-                    recipient_list=[recipient_email],
-                    fail_silently=False,
+                subject = 'Python Assignment - Kshitij Sarve'
+                from_email = settings.EMAIL_HOST_USER
+                to = [recipient_email]
+                
+                # Render the HTML content using a template
+                html_content = render_to_string('upload/email_summary.html', {
+                    'summary_html': summary_html,
+                })
+                
+                # Create the plain text content
+                summary_df = pd.read_html(summary_html)[0]  # Convert HTML table back to DataFrame
+                summary_text_plain = summary_df.to_string(index=False)
+                
+                # Create the email
+                email = EmailMultiAlternatives(
+                    subject=subject,
+                    body=summary_text_plain,  # Plain text version
+                    from_email=from_email,
+                    to=to,
                 )
+                email.attach_alternative(html_content, "text/html")
+                email.send(fail_silently=False)
+                
                 messages.success(request, "Email sent successfully!")
                 # Clear session data
                 request.session.pop('data_json', None)

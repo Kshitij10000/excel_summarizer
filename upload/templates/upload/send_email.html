@@ -8,24 +8,39 @@
         <h3>Summary Report</h3>
     </div>
     <div class="card-body">
-        <div class="table-responsive mb-4">
-            {{ summary_html|safe }}
-        </div>
-        <form method="post" class="row g-3">
-            {% csrf_token %}
-            <div class="col-md-12">
-                {{ form.recipient_email.label_tag }}
-                {{ form.recipient_email }}
-                {% if form.recipient_email.errors %}
-                    <div class="invalid-feedback d-block">
-                        {{ form.recipient_email.errors }}
+        <div class="row">
+            <!-- Summary Table on the Left -->
+            <div class="col-md-8">
+                <div class="table-responsive mb-4">
+                    {{ summary_html|safe }}
+                </div>
+            </div>
+            <!-- Email Form on the Right -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h5>Send Summary via Email</h5>
                     </div>
-                {% endif %}
+                    <div class="card-body">
+                        <form method="post">
+                            {% csrf_token %}
+                            <div class="mb-3">
+                                {{ form.recipient_email.label_tag }}
+                                {{ form.recipient_email }}
+                                {% if form.recipient_email.errors %}
+                                    <div class="invalid-feedback d-block">
+                                        {{ form.recipient_email.errors }}
+                                    </div>
+                                {% endif %}
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">
+                                <i class="bi bi-envelope"></i> Send Email
+                            </button>
+                        </form>
+                    </div>
+                </div>
             </div>
-            <div class="col-12 text-center">
-                <button type="submit" class="btn btn-primary"><i class="bi bi-envelope"></i> Send Email</button>
-            </div>
-        </form>
+        </div>
     </div>
 </div>
 {% endblock %}
